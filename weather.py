@@ -6,5 +6,5 @@ mng = OpenWMap.weather_manager()    #NEW
 obs = mng.weather_at_place('Tel-Aviv')
 #Weather=OpenWMap.weather_at_place(Tel-Aviv)  # give where you need to see the weather
 #Data=Weather.get_weather()                 # get out data in the mentioned location
-Data=obs.get_temperature(unit='celsius') #NEW
-print(obs)
+temp=obs.get_temperature(unit='celsius') #NEW
+print ("Average Temp. Currently ", temp['temp']) # get avg. tmp
