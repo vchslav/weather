@@ -2,11 +2,16 @@ from pyowm import OWM
 from pyowm.utils import config
 from pyowm.utils import timestamps
 
-owm = OWM('7045f4addca69a18ddabc4c10d413d8a')
-mgr = owm.weather_manager()
+def get_curr_temp():
 
-observation = mgr.weather_at_place('Tel-Aviv,IL')
-w = observation.weather
+    owm = OWM('7045f4addca69a18ddabc4c10d413d8a')
+    mgr = owm.weather_manager()
 
-print("Temperature in Tel-Aviv:", w.temperature('celsius'))
+    observation = mgr.weather_at_place('Tel-Aviv,IL')
+    w = observation.weather
+
+
+if __name__ == '__main__':
+    curr_temp = get_curr_temp()
+    print("Temperature in Tel-Aviv:", w.temperature('celsius'))
 
