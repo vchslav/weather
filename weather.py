@@ -8,7 +8,5 @@ mgr = owm.weather_manager()
 observation = mgr.weather_at_place('Tel-Aviv,IL')
 w = observation.weather
 
-for i in w:
-
 print(w.temperature('celsius'))
 
