@@ -9,10 +9,11 @@ def get_curr_temp():
 
     observation = mgr.weather_at_place('Tel-Aviv,IL')
     w = observation.weather
-    return w
+    temp = w.temperature('celsius')
+    return temp
 
 
 if __name__ == '__main__':
     curr_temp = get_curr_temp()
-    print("Temperature in Tel-Aviv:", w.temperature('celsius'))
+    print("Temperature in Tel-Aviv:", curr_temp)
 
