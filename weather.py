@@ -1,8 +1,12 @@
 from pyowm import OWM
+from pyowm.utils import config
+from pyowm.utils import timestamps
 
-APIKEY='7045f4addca69a18ddabc4c10d413d8a' 
-owm = OWM(APIKEY) # TODO: Replace <api_key> with your API key
+owm = OWM('7045f4addca69a18ddabc4c10d413d8a')
 mgr = owm.weather_manager()
-observation = mgr.weather_at_place('San Francisco, US')
-print(observation)
+
+observation = mgr.weather_at_place('London,GB')
+w = observation.weather
+
+print(w.temperature('celsius'))
 
