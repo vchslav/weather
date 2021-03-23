@@ -1,3 +1,5 @@
+#pyowm 3.2.0 https://pypi.org/project/pyowm/
+
 from pyowm import OWM
 from pyowm.utils import config
 from pyowm.utils import timestamps
@@ -15,5 +17,7 @@ def get_curr_temp():
 
 if __name__ == '__main__':
     curr_temp = get_curr_temp()
+    print("Hello, Iguazio")
     print("Temperature in Tel-Aviv:", curr_temp)
+
 
