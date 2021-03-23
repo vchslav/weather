@@ -14,7 +14,8 @@ def get_curr_temp():
     temp = w.temperature('celsius')
     weather_parameters = ("detailed_status", "wind()", "temperature('celsius')", "rain", "heat_index", "clouds")
     for x in weather_parameters:
-        print(w+"."+x)
+        z = w. + str(variable)
+        print(z)
     return temp
 
 
