@@ -9,6 +9,7 @@ def get_curr_temp():
 
     observation = mgr.weather_at_place('Tel-Aviv,IL')
     w = observation.weather
+    return w
 
 
 if __name__ == '__main__':
