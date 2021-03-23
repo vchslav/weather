@@ -1,4 +1,6 @@
 import pyowm
-owm = pyowm.OWM('<api_key>') # TODO: Replace <api_key> with your API key
+
+APIKEY='7045f4addca69a18ddabc4c10d413d8a' 
+owm = pyowm.OWM(APIKEY) # TODO: Replace <api_key> with your API key
 la = owm.three_hours_forecast('Los Angeles, US')
 print(la.will_have_clouds())
