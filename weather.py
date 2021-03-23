@@ -12,6 +12,9 @@ def get_curr_temp():
     observation = mgr.weather_at_place('Tel-Aviv,IL')
     w = observation.weather
     temp = w.temperature('celsius')
+    weather_parameters = ("detailed_status", "wind()", "temperature('celsius')", "rain", "heat_index", "clouds")
+    for x in weather_parameters:
+        print(w.x)
     return temp
 
 
